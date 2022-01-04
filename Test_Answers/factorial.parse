@@ -1,0 +1,33 @@
+(   5) PROGRAM
+(   5)   STATEMENT LIST [6]
+(   7)     STATEMENT (DECLARATION)
+(   7)       TYPE ('int')
+(   7)       IDENTIFIER 'n'
+(   0)       LITERAL 'int' 0
+(   9)     STATEMENT (WRITE)
+(   9)       EXPR LIST [1]
+(   9)         LITERAL 'string' 'Enter n:'
+(  10)     STATEMENT (READ)
+(  10)       ID LIST [1]
+(  10)         IDENTIFIER 'n'
+(  13)     STATEMENT (DECLARATION)
+(  13)       TYPE ('int')
+(  13)       IDENTIFIER 'fact'
+(  13)       LITERAL 'int' 1
+(  16)     STATEMENT (FOR)
+(  16)       IDENTIFIER 'i'
+(  16)       LITERAL 'int' 1
+(  16)       IDENTIFIER 'n'
+(   0)       LITERAL 'int' 1
+(  17)       STATEMENT LIST [1]
+(  17)         STATEMENT (EXPRESSION)
+(  17)           BINARY_OP '='
+(  17)             IDENTIFIER 'fact'
+(  17)             BINARY_OP '*'
+(  17)               IDENTIFIER 'fact'
+(  17)               IDENTIFIER 'i'
+(  21)     STATEMENT (WRITE)
+(  21)       EXPR LIST [3]
+(  21)         IDENTIFIER 'n'
+(  21)         LITERAL 'string' '! = '
+(  21)         IDENTIFIER 'fact'

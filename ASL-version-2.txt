@@ -1,0 +1,111 @@
+#-----------------------------------------------------------
+# ASL version 2
+#-----------------------------------------------------------
+# Program
+
+  { <statement_list> }
+
+# Statement List -- A list of statements separated by semicolons.
+#   A semicolon may terminate the list, but this is not required.
+
+  statement [ ; statement ]* ;?
+
+#---------------------------------------
+# Statement:  Break
+
+  break
+
+#---------------------------------------
+# Statement:  Continue
+
+  continue
+
+#---------------------------------------
+# Statement:  Declaration
+
+  <type> <identifier> [ = <expression> ]
+
+#---------------------------------------
+# Statement:  Expression
+
+  <expression>
+
+  === Operators ===
+
+    =
+    ||
+    &&
+    ==, <>
+    <, <=, >, >=
+    +, -
+    *, /, %
+    ^
+    - (unary), + (unary)
+    ! (unary)
+
+  === Literals ===
+
+    INT_LITERAL     a sequnce of decimal digits.
+
+    REAL_LITERAL    a sequence of decimal digits including a
+      decimal point '.' and optionally an exponent, which is the
+      letter 'e' or 'E' optionally followed by a sign ('+' or
+      '-') followed by a sequence of decimal digits.
+
+      If the exponent is given, the decimal point may be omitted.
+
+    STRING_LITERAL  any characters except " and \n within
+      quotation marks (").  The following escapes are permitted:
+        \"  a " character
+        \\  a \ character
+        \a  Alert            -> character  7 (decimal)
+        \b  Backspace        -> character  8 (decimal)
+        \e  Escape           -> character 27 (decimal)
+        \f  Formfeed         -> character 12 (decimal)
+        \n  Newline          -> character 10 (decimal)
+        \r  Carriagee Return -> character 13 (decimal)
+        \t  Horizontal Tab   -> character  9 (decimal)
+        \v  Vertical Tab     -> character 11 (decimal)
+
+#---------------------------------------
+# Statement:  For
+
+  for <identifer> = <expression> to <expression> [ by <expression> ] do
+    <statement_list>
+  end for
+
+#---------------------------------------
+# Statement:  If
+
+  if <expression> then
+    <statement_list>
+  [ elif <expression> then
+      <statement_list> ]*
+  [ else
+      <statement_list> ]
+  end if
+
+#---------------------------------------
+# Statement: Read
+
+  read( <identifier> [ , <identifier> ]* )
+
+#---------------------------------------
+# Statement: While
+
+  while <expression> do
+    <statement_list>
+  end while
+
+#---------------------------------------
+# Statement: Write
+
+  write( [ <expression> [ , <expression> ]* ]? )
+
+
+#---------------------------------------
+# Type (Scalar)
+
+  int | real
+
+#-----------------------------------------------------------
